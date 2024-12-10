@@ -1,0 +1,139 @@
+.category-banner {
+    display: block;
+    margin: 32px auto;
+    width: 70%;
+    height: 300px;
+    object-fit: fill; /* Ensures the image scales nicely */
+}
+
+/* Shop category sorting and product list */
+.shopcategory-indexSort {
+    display: flex;
+    margin: 0px 225px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopcategory-sort {
+    padding: 10px 10px;
+    border-radius: 40px;
+    border: 1px solid #888;
+}
+
+.shopcategory-sort img{
+    width: 10px;
+    height: auto;
+}
+
+
+
+.shopcategory-indexSort p span {
+    font-weight: 600;
+}
+
+.shopcategory-products {
+    margin: 20px 170px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 80px;
+    margin-bottom: 70px ;
+}
+
+.shopcategory-loadmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    width: 233px;
+    height: 69px;
+    border-radius: 75px;
+    background: #ededed;
+    color: #787878;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Responsive Design for Medium Screens (Tablets) */
+@media (max-width: 1024px) {
+    .category-banner {
+        width: 80%; /* Make the banner wider on medium screens */
+        height: 250px; /* Reduce the height slightly */
+    }
+
+    .shopcategory-indexSort {
+        margin: 0px 50px; /* Adjust margins for medium screens */
+        flex-direction: column;
+        align-items: flex-start; /* Stack items vertically */
+        gap: 10px; /* Add spacing between elements */
+    }
+
+    .shopcategory-products {
+        margin: 20px 50px;
+        grid-template-columns: 1fr 1fr 1fr; /* Show 3 products per row */
+        row-gap: 60px;
+    }
+}
+
+/* Responsive Design for Small Screens (Mobile) */
+@media (max-width: 600px) {
+    .category-banner {
+        width: 90%; /* Full-width banner for mobile */
+        height: 200px; /* Smaller height for mobile */
+    }
+
+    .shopcategory-indexSort {
+        margin: 0px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+        gap: 15px;
+    }
+
+    .shopcategory-sort {
+        padding: 8px 16px; /* Smaller padding on mobile */
+        font-size: 14px; /* Reduce font size for mobile */
+    }
+
+    .shopcategory-products {
+        margin: 20px 20px;
+        grid-template-columns: 1fr 1fr; /* 2 products per row */
+        row-gap: 40px;
+    }
+
+    .shopcategory-loadmore {
+        width: 200px;
+        height: 60px;
+        font-size: 16px;
+    }
+}
+
+/* Responsive Design for Extra Small Screens (very small mobile devices) */
+@media (max-width: 400px) {
+    .category-banner {
+        width: 100%; /* Full-width banner */
+        height: 180px; /* Reduce height */
+    }
+
+    .shopcategory-indexSort {
+        margin: 0px 10px;
+        gap: 10px;
+    }
+
+    .shopcategory-sort {
+        padding: 6px 12px;
+        font-size: 12px; /* Smaller text */
+    }
+
+    .shopcategory-products {
+        margin: 20px 10px;
+        grid-template-columns: 1fr; /* One product per row */
+        row-gap: 30px;
+    }
+
+    .shopcategory-loadmore {
+        width: 180px;
+        height: 55px;
+        font-size: 14px;
+    }
+}

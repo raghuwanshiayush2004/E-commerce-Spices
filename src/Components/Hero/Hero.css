@@ -1,0 +1,189 @@
+/* Default styles (for desktop) */
+.hero {
+    height: 120vh;
+    background: linear-gradient(180deg, powderblue 30%, white 100%);
+    display: flex;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px; /* Increased gap for better spacing */
+    padding-left: 180px; /* Left padding for larger screens */
+    line-height: 1.1;
+}
+
+.hero-left h2 {
+    color: #090909;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.hero-left p {
+    color: #171717;
+    font-size: 100px;
+    font-weight: 700;
+}
+
+.hero-hand-icon {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Reduced gap for better spacing */
+    margin: 15px 0; /* Vertical margin for spacing */
+}
+
+.hero-hand-icon img {
+    width: 100px; /* Reduced size for better alignment */
+}
+
+.hero-latest-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Reduced gap for better spacing */
+    width: 310px;
+    height: 70px;
+    border-radius: 75px;
+    margin: 20px 0; /* Vertical margin for spacing */
+    background: black;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.hero-latest-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-right img {
+    width: 70%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1200px) {
+    .hero-left {
+        padding-left: 100px; /* Adjusted left padding */
+    }
+    .hero-left p {
+        font-size: 80px; /* Decrease the font size for smaller screens */
+    }
+    .hero-latest-btn {
+        width: 270px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+    }
+
+    .hero-left {
+        padding-left: 0;
+        text-align: center;
+        gap: 20px; /* Maintain gap for smaller screens */
+    }
+
+    .hero-left h2 {
+        font-size: 24px;
+    }
+
+    .hero-left p {
+        font-size: 60px;
+    }
+
+    .hero-hand-icon {
+        margin: 10px 0; /* Adjusted vertical margins */
+    }
+
+    .hero-hand-icon img {
+        width: 80px; /* Adjust icon size */
+    }
+
+    .hero-latest-btn {
+        width: 240px;
+        height: 50px;
+        font-size: 18px;
+        margin: 15px 0; /* Adjusted vertical margin */
+    }
+
+    .hero-right img {
+        width: 80%;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    .hero-left {
+        padding-left: 0;
+        gap: 15px;
+        align-items: flex-start; /* Align left items to start */
+    }
+
+    .hero-left h2 {
+        font-size: 22px;
+    }
+
+    .hero-left p {
+        font-size: 40px;
+    }
+
+    .hero-hand-icon {
+        margin: 5px 0; /* Adjusted vertical margins */
+        gap: 5px; /* Maintain gap between hand icon and text */
+    }
+
+    .hero-hand-icon img {
+        width: 60px;
+    }
+
+    .hero-latest-btn {
+        width: 200px;
+        height: 45px;
+        font-size: 16px;
+        margin: 15px 0; /* Adjusted vertical margin */
+    }
+
+    .hero-right img {
+        width: 90%;
+        margin-top: 20px; /* Ensure there’s space above the image */
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 400px) {
+    .hero-left h2 {
+        font-size: 20px;
+    }
+
+    .hero-left p {
+        font-size: 30px;
+    }
+
+    .hero-latest-btn {
+        width: 180px;
+        height: 40px;
+        font-size: 14px;
+    }
+}

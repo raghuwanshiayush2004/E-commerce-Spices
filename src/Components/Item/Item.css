@@ -1,0 +1,79 @@
+.item {
+    width: 100%; /* Make it responsive by using 100% width */
+    max-width: 350px; /* Keep max width for larger screens */
+    margin: 0 auto; /* Center the item */
+}
+
+.item p {
+    display: flex;
+    justify-content: center; /* Use percentage for flexible spacing */
+}
+
+.item-prices {
+    display: flex;
+    gap: 10px; /* Reduce the gap slightly */
+    justify-content: center; /* Center-align the prices */
+}
+
+.item-price-new, .item-price-old {
+    font-size: 1rem; /* Responsive font size */
+}
+
+.item-price-new {
+    color: #374151;
+    font-weight: 600;
+    margin: 0 10px;
+}
+
+.item-price-old {
+    color: #8c8c8c;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+
+.item:hover {
+    transform: scale(1.05);
+    transition: 0.4s ease; /* Smooth transition on hover */
+}
+
+.item img {
+    width: 100%;
+    max-width: 130px; /* Keep image size fixed for larger screens */
+    height: 60%; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center image */
+    display: block;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .item {
+        max-width: 300px;
+    }
+
+    .item img {
+        max-width: 100px; /* Reduce image size on smaller screens */
+    }
+
+    .item-prices {
+        gap: 8px; /* Adjust gap for smaller screens */
+    }
+
+    .item-price-new, .item-price-old {
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        max-width: 100%; /* Full width for mobile screens */
+        margin: 10px 0; /* Add some spacing */
+    }
+
+    .item img {
+        max-width: 80px; /* Further reduce image size for mobile */
+    }
+
+    .item-price-new, .item-price-old {
+        font-size: 0.8rem; /* Smaller font for mobile */
+    }
+}

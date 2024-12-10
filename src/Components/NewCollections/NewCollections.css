@@ -1,0 +1,102 @@
+/* Default (for desktop) */
+.new-collections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 120px;
+}
+
+.new-collections h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.new-collections hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 10px;
+    background: #252525;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    margin-top: 50px;
+    margin-left: 30px;
+    gap: 60px; /* Increase gap to prevent overlap */
+}
+
+/* Large Tablets and Small Desktops */
+@media (max-width: 1200px) {
+    .new-collections h1 {
+        font-size: 40px; /* Reduce font size for medium screens */
+    }
+
+    .new-collections hr {
+        width: 160px;
+        height: 5px;
+    }
+
+    .collections {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+        margin-left: 20px; /* Adjust margin */
+        gap: 40px; /* Reduce gap */
+    }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .new-collections h1 {
+        font-size: 35px;
+    }
+
+    .new-collections hr {
+        width: 140px;
+        height: 4px;
+    }
+
+    .collections {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet screens */
+        margin-left: 10px; /* Adjust margin */
+        gap: 30px; /* Adjust gap */
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    .new-collections h1 {
+        font-size: 28px;
+    }
+
+    .new-collections hr {
+        width: 120px;
+        height: 3px;
+    }
+
+    .collections {
+        grid-template-columns: 1fr; /* 1 column for mobile screens */
+        margin-left: 0; /* Remove margin for mobile screens */
+        padding: 0 10px; /* Add padding for spacing on small screens */
+        gap: 15px; /* Smaller gap for mobile */
+    }
+}
+
+/* Small Mobile Phones */
+@media (max-width: 400px) {
+    .new-collections h1 {
+        font-size: 24px;
+    }
+
+    .new-collections hr {
+        width: 100px;
+        height: 3px;
+    }
+
+    .collections {
+        margin-left: 0; /* Keep margin at zero for very small screens */
+        padding: 0 5px; /* Adjust padding for very small screens */
+        gap: 10px; /* Adjust gap for very small screens */
+    }
+}
